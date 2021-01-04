@@ -1,0 +1,24 @@
+cc_defaults {
+    name: "libaudioclient_tests_audiotrack_defaults",
+    cflags: [
+        "-Wall",
+        "-Werror",
+        "-Wno-unused-parameter",
+        "-Wno-format",
+        "-Wno-unused-comparison",
+        "-Wno-unused-variable",
+    ],
+}
+
+cc_binary {
+    name: "test_audiorecord",
+    defaults: ["libaudioclient_tests_audiotrack_defaults"],
+    srcs: ["audio_record_test.cpp"],
+    shared_libs: [
+        "libaudioclient",
+        "libbinder",
+        "libcutils",
+        "libutils",
+    ],
+}
+
