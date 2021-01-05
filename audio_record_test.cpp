@@ -49,13 +49,13 @@ static void *	AudioRecordThread( void *inArg )
 	audio_format_t 				audioFormat 			= AUDIO_FORMAT_PCM_16_BIT;	
 	audio_channel_mask_t 	channelConfig 		= AUDIO_CHANNEL_IN_MONO; //AUDIO_CHANNEL_IN_STEREO;	
 	int 									bufferSizeInBytes = 1600;
-	int 									sampleRateInHz 		= 8000;	
+	int 									sampleRateInHz 		= 16000;	
 	android::AudioRecord *	pAudioRecord 		= NULL;
 	FILE * 									g_pAudioRecordFile 		= NULL;
 	//char 										strAudioFile[] 				= "/mnt/sdcard/external_sd/AudioRecordFile.pcm";
 	char 										strAudioFile[] 				= "./AudioRecordFile.pcm";
  
-	int iNbChannels 		= 1;	// 1 channel for mono, 2 channel for streo
+	int iNbChannels 		= 2;	// 1 channel for mono, 2 channel for streo
 	int iBytesPerSample = 2; 	// 16bits pcm, 2Bytes
 	int frameSize 			= 0;	// frameSize = iNbChannels * iBytesPerSample
     //int minFrameCount 	= 0;	// get from AudroRecord object
