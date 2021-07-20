@@ -45,9 +45,9 @@ static void *	AudioRecordThread( void *inArg )
 {
 	uint64_t  						inHostTime 				= 0;
 	void *								inBuffer 					= NULL; 
-	audio_source_t 				inputSource 			= AUDIO_SOURCE_MIC;
+	audio_source_t 				inputSource 			= AUDIO_SOURCE_VOICE_RECOGNITION;//AUDIO_SOURCE_VOICE_RECOGNITION;AUDIO_SOURCE_MIC
 	audio_format_t 				audioFormat 			= AUDIO_FORMAT_PCM_16_BIT;	
-	audio_channel_mask_t 	channelConfig 		= AUDIO_CHANNEL_IN_MONO; //AUDIO_CHANNEL_IN_STEREO;	
+	audio_channel_mask_t 	channelConfig 		= AUDIO_CHANNEL_IN_STEREO; //AUDIO_CHANNEL_IN_STEREO;AUDIO_CHANNEL_IN_MONO
 	int 									bufferSizeInBytes = 1600;
 	int 									sampleRateInHz 		= 16000;	
 	android::AudioRecord *	pAudioRecord 		= NULL;
